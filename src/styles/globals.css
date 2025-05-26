@@ -10,7 +10,10 @@
 }
 
 html, body {
-  @apply m-0 p-0 font-sans bg-[#FFEDD5];
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: (#F8F8FF);
 }
 
 .text-primary { color: var(--color-primary) !important; }
