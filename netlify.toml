@@ -1,7 +1,10 @@
 [build]
   command   = "npm run build"
-  publish   = "."
-  functions = ".netlify/functions"
+  publish   = ".next"
+  functions = "netlify/functions"
+
+[build.environment]
+  PHP_VERSION = "8.3"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
