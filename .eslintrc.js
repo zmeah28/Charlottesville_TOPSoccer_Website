@@ -4,7 +4,7 @@ module.exports = {
       'node_modules/',
       '.next/',
       'public/',
-      'src/generated/prisma/**',    
+      'src/generated/**',    
     ],
     extends: ['next/core-web-vitals'],
     rules: {
