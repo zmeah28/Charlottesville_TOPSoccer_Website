@@ -17,6 +17,9 @@
     "react-dom": "^18.2.0",
     "styled-jsx": "^5.1.7"
   },
+  "eslintConfig": {
+    "root": true
+  },
   "devDependencies": {
     "@netlify/plugin-nextjs": "^5.11.2",
     "@prisma/client": "^6.8.2",
