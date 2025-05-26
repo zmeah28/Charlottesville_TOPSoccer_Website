@@ -54,7 +54,7 @@ const HomePage: React.FC = () => {
   return (
     <div className={styles.frame}>
       {/* Home Image */}
-      <div className={styles.heroImage}>
+      <div className={styles.homeImage}>
         <Image
           src={HomeImg}
           alt="Home"
