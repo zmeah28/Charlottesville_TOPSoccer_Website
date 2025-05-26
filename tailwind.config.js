@@ -1,7 +1,6 @@
-// tailwind.config.js
-const aspectRatio = require('@tailwindcss/aspect-ratio');
+import aspectRatio from '@tailwindcss/aspect-ratio';
 
-module.exports = {
+export default {
   content: [
     './app/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,jsx,tsx}',
