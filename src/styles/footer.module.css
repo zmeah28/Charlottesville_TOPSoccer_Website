@@ -1,0 +1,32 @@
+.footer {
+  background-color: #001f3f;
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.footerBottom {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+.contactLink {
+  color: #ffffff;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.contactLink:hover {
+  color: #c06000;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .footer {
+    padding: 0.5rem;
+  }
+  .footerBottom {
+    font-size: 0.8rem;
+  }
+}

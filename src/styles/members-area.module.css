@@ -1,0 +1,94 @@
+.aboutFrame {
+  padding: 2rem;
+  background: #ffb700;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.mainHeading {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.highlightBox {
+  border: 2px solid #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem auto 2rem;
+  max-width: 700px;
+  text-align: left;
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.animateSlideInLeft { animation: slideInLeft 1s forwards; }
+.animateSlideInRight { animation: slideInRight 1s forwards; }
+.animateFadeIn      { animation: fadeIn 1s forwards; }
+
+.subHeading {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  color: #001f3f;
+  margin-bottom: 1rem;
+}
+
+.contentSection {
+  font-family: 'Oswald', sans-serif;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  text-align: left;
+  color: #fff;
+}
+
+.infoList {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+  color: #fff;
+}
+.infoListItem {
+  margin-bottom: 0.5rem;
+}
+
+.imageSection {
+  margin: 3rem 0;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .contentSection,
+  .imageContainer {
+    padding: 0 1rem;
+  }
+}

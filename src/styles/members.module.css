@@ -1,0 +1,131 @@
+/* Container */
+.aboutFrame {
+    padding: 2rem;
+    background-color: #ffb700;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+  }
+
+  /* Main Coach Image */
+.Image {
+  margin-bottom: 2rem;
+  width: 100%;  
+  height: 100%;     
+  margin-left: auto;
+  margin-right: auto;        
+}
+  
+  /* Headings */
+  .mainHeading {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .subHeading {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.25rem;
+    color: #001f3f;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  /* Content section */
+  .contentSection {
+    font-family: 'Oswald', sans-serif;
+    max-width: 700px;
+    color: #fff;
+    margin: 0 auto 2rem;
+    text-align: left;
+  }
+
+  /* Lists */
+  .infoList {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+    color: #fff;
+    text-align: left;
+  }
+  .infoListItem {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Coaches grid */
+  .coachSection {
+    margin-top: 3rem;
+    text-align: center;
+  }
+  .coachGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .coachCard {
+    flex: 0 1 180px;
+    text-align: center;
+  }
+  .coachImage {
+    width: 160px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+  }
+  .rounded {
+    border-radius: 10px;
+  }
+  .coachName {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    color: #fff;
+  }
+  
+  /* Animations */
+  @keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes slideInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  .animateSlideInLeft { animation: slideInLeft 1s forwards; }
+  .animateSlideInRight { animation: slideInRight 1s forwards; }
+  .animateFadeIn { animation: fadeIn 1s forwards; }
+  
+  /* Hidden by default */
+  .hidden { opacity: 0; }
+  
+  /* Transition helpers */
+  .aboutFrame,
+  .coachCard,
+  .mainHeading,
+  .subHeading,
+  .bulletSection,
+  .contentSection {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .aboutFrame { padding: 1rem; }
+    .subHeading { font-size: 1.5rem; }
+    .coachGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .coachCard {
+      flex: 0 1 calc(50% - 1rem);
+    }
+  }
+  

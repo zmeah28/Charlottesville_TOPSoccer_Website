@@ -1,0 +1,73 @@
+.aboutFrame {
+  padding: 2rem;
+  background: #ffb700;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.mainHeading {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+/* Community Partners */
+.playersSection {
+  margin-bottom: 3rem;
+}
+.playerGrid {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.playerGrid > div {
+  flex: 1 1 calc(50% - 1.5rem);
+  max-width: 250px;
+}
+
+/* Community Supporters */
+.volunteerSection {
+  margin: 3rem 0;
+}
+.volunteerGrid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.volunteerGrid > div {
+  flex: 1 1 calc(100% - 2rem);
+  max-width: 800px;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.animateSlideInLeft {
+  animation: slideInLeft 1s forwards;
+}
+.animateFadeIn {
+  animation: fadeIn 1s forwards;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .playerGrid,
+  .volunteerGrid {
+    flex-direction: column;
+  }
+}

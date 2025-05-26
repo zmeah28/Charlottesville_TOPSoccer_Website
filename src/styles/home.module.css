@@ -1,0 +1,102 @@
+.frame {
+  padding: 0.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Home Image */
+.heroImage {
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 980px;          
+  margin-left: auto;
+  margin-right: auto;        
+}
+
+.mainImage {
+  width: 100%;              
+  height: auto;            
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* “Our Story” Section */
+.storySection {
+  margin-bottom: 4rem;
+}
+.sectionTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  color: #f8961e;
+  margin-bottom: 1rem;
+}
+.introText {
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #001f3f;
+}
+.storyImageContainer {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+.storyImage {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Video Section */
+.videoSection {
+  margin-bottom: 4rem;
+}
+
+.videoContainer {
+  max-width: 800px;  
+  width: 100%;
+  margin: 0 auto;
+}
+
+.video {
+  width: 100%;
+  aspect-ratio: 16/9; 
+  height: auto;       
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+/* Animations */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.animateSlideInLeft  { animation: slideInLeft  1s forwards; }
+.animateSlideInRight { animation: slideInRight 1s forwards; }
+.animateFadeIn        { animation: fadeIn      1s forwards; }
+
+.hidden { opacity: 0; }
+
+/* Transitions */
+.sectionTitle,
+.introText,
+.storyImageContainer,
+.videoContainer {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+@media (max-width: 600px) {
+  .frame { padding: 1rem; }
+  .sectionTitle { font-size: 1.5rem; }
+  .video { aspect-ratio: 16/9; }
+}

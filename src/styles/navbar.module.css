@@ -1,0 +1,166 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1000;
+  }
+  
+  /* Left section: logo + title */
+  .leftSection {
+    display: flex;
+    align-items: center;
+  }
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  .logo {
+    width: 65px;
+    height: 65px;
+  }
+  .siteTitle {
+    margin-left: 0.75rem;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    color: #001f3f;
+    font-weight: bold;
+  }
+  
+  /* Hamburger (mobile) */
+  .menuIcon {
+    display: none;
+    font-size: 2rem;
+    color: #001f3f;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Center section: nav items + socials */
+  .centerSection {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    position: relative;
+  }
+  
+  /* Nav items container, centered via margin auto */
+  .navItems {
+    display: flex;
+    gap: 2rem;
+    margin: 0 auto;
+    padding-top: 1.2rem;
+  }
+  .show {
+    display: flex !important;
+  }
+  
+  /* Individual nav item for bounce */
+  .navItem {
+    position: relative;
+  }
+  
+  /* Link text + bar */
+  .navLink {
+    position: relative;
+    font-family: 'Oswald', sans-serif;
+    color: #001f3f;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.25rem;
+  }
+  .navLink::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #001f3f;
+  }
+  
+  /* Hopping soccer ball */
+  .soccerBall {
+    position: absolute;
+    bottom: calc(100% + 7.5px);
+    left: 50%;
+    transform: translateX(-50%) translateY(0);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .navItem:hover .soccerBall {
+    opacity: 1;
+    animation: bounce 0.6s ease;
+  }
+  @keyframes bounce {
+    0%   { transform: translateX(-50%) translateY(0); }
+    30%  { transform: translateX(-50%) translateY(-10px); }
+    50%  { transform: translateX(-50%) translateY(0); }
+    70%  { transform: translateX(-50%) translateY(-5px); }
+    100% { transform: translateX(-50%) translateY(0); }
+  }
+  
+  /* Social icons pinned to the right */
+  .socialIcons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: auto;
+  }
+  .socialIcon {
+    transition: opacity 0.3s;
+  }
+  .socialIcon:hover {
+    opacity: 0.7;
+  }
+  
+  /* Mobile menu */
+  @media (max-width: 600px) {
+    .menuIcon {
+      display: block;
+    }
+    .navItems {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #fff;
+      width: 100%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 1rem 0;
+    }
+    .show {
+      display: flex !important;
+    }
+    .navLink {
+      margin: 0.5rem auto;
+    }
+    .socialIcons {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 700px) {
+    .navLink::before {
+      display: none;
+    }
+    /* remove the hopping ball */
+    .soccerBall {
+      display: none !important;
+    }
+    /* fade-background hover on links */
+    .navLink {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .navLink:hover {
+      background-color: rgba(0, 31, 63, 0.1);
+      color: #001f3f;
+      border-radius: 4px;
+    }
+  }
+  
