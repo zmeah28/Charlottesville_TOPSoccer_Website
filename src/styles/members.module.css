@@ -1,6 +1,6 @@
 .aboutFrame {
     padding: 2rem;
-    background-color: #ffb700;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 800px;
@@ -19,7 +19,7 @@
   .mainHeading {
     font-family: 'Oswald', sans-serif;
     font-size: 3rem;
-    color: #fff;
+    color: #ffb700;
     margin-bottom: 1.5rem;
     text-align: center;
   }
@@ -27,7 +27,7 @@
   .subHeading {
     font-family: 'Oswald', sans-serif;
     font-size: 1.25rem;
-    color: #001f3f;
+    color: #ffb700;
     margin-bottom: 1rem;
     text-align: left;
   }
@@ -35,7 +35,7 @@
   .contentSection {
     font-family: 'Oswald', sans-serif;
     max-width: 700px;
-    color: #fff;
+    color: #001f3f;
     margin: 0 auto 2rem;
     text-align: left;
   }
@@ -44,7 +44,7 @@
     list-style-type: disc;
     padding-left: 1.5rem;
     margin: 1rem 0;
-    color: #fff;
+    color: #001f3f;
     text-align: left;
   }
   .infoListItem {

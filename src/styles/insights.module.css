@@ -1,6 +1,6 @@
 .aboutFrame {
     padding: 2rem;
-    background: #ffb700;
+    background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     max-width: 800px;
@@ -11,13 +11,13 @@
   .mainHeading {
     font-family: 'Oswald', sans-serif;
     font-size: 2.5rem;
-    color: #fff;
+    color: #ffb700;
     margin-bottom: 1.5rem;
   }
   .subHeading {
     font-family: 'Oswald', sans-serif;
     font-size: 2rem;
-    color: #001f3f;
+    color: #ffb700;
     margin-bottom: 1rem;
   }
   
@@ -26,14 +26,14 @@
     max-width: 700px;
     margin: 0 auto 2rem;
     text-align: left;
-    color: #fff;
+    color: #001f3f;
   }
   
   .infoList {
     list-style-type: disc;
     padding-left: 1.5rem;
     margin: 1rem 0;
-    color: #fff;
+    color: #001f3f;
   }
   .infoListItem {
     margin-bottom: 0.5rem;

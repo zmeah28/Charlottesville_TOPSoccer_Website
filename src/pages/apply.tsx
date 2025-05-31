@@ -60,7 +60,7 @@ const ApplyPage: React.FC = () => {
         </div>
       </div>
 
-      <h1 className={`${styles.mainHeading} ${styles.hidden}`} data-animation="animateSlideInLeft">
+     {/*  <h1 className={`${styles.mainHeading} ${styles.hidden}`} data-animation="animateSlideInLeft">
         Community Supporters
       </h1>
       <section className={styles.supporterSection}>
@@ -82,8 +82,9 @@ const ApplyPage: React.FC = () => {
             />
           </div>
         </div>
-      </section>
-    </div>
+      </section>*/}
+    </div> 
+
   );
 };
 
