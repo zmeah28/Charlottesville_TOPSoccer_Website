@@ -10,10 +10,10 @@ import instagramLogo from '@/assets/images/instagram_logo2.png';
 
 const navItems = [
   { label: 'Home', href: '/' },
-  { label: 'Members', href: '/members' },
-  { label: 'Insights', href: '/insights' },
-  { label: 'Apply', href: '/apply' },
-  { label: 'Members Area', href: '/members-area' },
+  { label: 'About Us', href: '/members' },
+  { label: 'Join Us', href: '/insights' },
+  { label: 'Community', href: '/apply' },
+  { label: 'Inclusion Policy', href: '/members-area' },
 ];
 
 const Navbar: React.FC = () => {
