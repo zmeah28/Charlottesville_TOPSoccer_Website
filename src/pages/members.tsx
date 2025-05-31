@@ -9,6 +9,7 @@ import TylerCoach from '@/assets/images/Tyler_Coach.jpeg';
 import TateCoach from '@/assets/images/Tate_Coach.jpeg';
 import KatieCoach from '@/assets/images/Katie_Coach.jpeg';
 import JacksonCoach from '@/assets/images/Jackson_Coach.jpeg';
+import JosephCoach from '@/assets/images/Joseph_Coach.jpeg';
 
 const canParticipateListItems = [
   'Autism',
@@ -46,6 +47,7 @@ const coaches = [
   { img: TateCoach,       alt: 'Tate Carr',        name: 'Tate Carr' },
   { img: JacksonCoach,    alt: 'Jackson Manderfield', name: 'Jackson Manderfield' },
   { img: TrumanCoach,     alt: 'Truman Griffith',  name: 'Truman Griffith' },
+  { img: JosephCoach,     alt: 'Joseph Fontana',  name: 'Joseph Fontana' }
 ];
 
 const members: React.FC = () => {
