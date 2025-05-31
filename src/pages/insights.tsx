@@ -113,8 +113,10 @@ const AboutPage: React.FC = () => {
           </p>
         </section>
 
+        <h1 className={`${styles.mainHeading} ${styles.hidden}`} data-animation="animateSlideInLeft">
+            Location and Time
+        </h1>
         <section className={`${styles.contentSection} ${styles.hidden}`} data-animation="animateSlideInLeft">
-          <h2 className={styles.subHeading}>Location and Time</h2>
           <ul className={styles.infoList}>
             <li className={styles.infoListItem}>
               Sessions are held on Saturdays from 10 AM – 11 AM at Alliance Sports Park (1313 Polo Grounds Road, Charlottesville, VA 22911)

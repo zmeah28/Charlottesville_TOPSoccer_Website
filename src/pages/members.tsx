@@ -46,8 +46,7 @@ const coaches = [
   { img: TylerCoach,      alt: 'Tyler Rynne',      name: 'Tyler Rynne' },
   { img: TateCoach,       alt: 'Tate Carr',        name: 'Tate Carr' },
   { img: JacksonCoach,    alt: 'Jackson Manderfield', name: 'Jackson Manderfield' },
-  { img: TrumanCoach,     alt: 'Truman Griffith',  name: 'Truman Griffith' },
-  { img: JosephCoach,     alt: 'Joseph Fontana',  name: 'Joseph Fontana' }
+  { img: TrumanCoach,     alt: 'Truman Griffith',  name: 'Truman Griffith' }
 ];
 
 const members: React.FC = () => {
