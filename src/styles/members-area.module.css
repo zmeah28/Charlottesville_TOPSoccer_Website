@@ -83,12 +83,12 @@
   max-width: 800px;
   height: auto;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 @media (max-width: 600px) {
   .contentSection,
   .imageContainer {
-    padding: 0 1rem;
+    padding: 0rem;
   }
 }

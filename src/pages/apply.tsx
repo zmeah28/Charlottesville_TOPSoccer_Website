@@ -36,8 +36,8 @@ const ApplyPage: React.FC = () => {
       <h1 className={`${styles.mainHeading} ${styles.hidden}`} data-animation="animateSlideInLeft">
         Community Partners
       </h1>
-      <div className={styles.playersSection}>
-        <div className={styles.playerGrid}>
+      <div className={styles.partnerSection}>
+        <div className={styles.partnerGrid}>
           {[PartnershipsImg, PartnershipsImg2].map((img, idx) => (
             <div
               key={idx}
@@ -63,8 +63,8 @@ const ApplyPage: React.FC = () => {
       <h1 className={`${styles.mainHeading} ${styles.hidden}`} data-animation="animateSlideInLeft">
         Community Supporters
       </h1>
-      <section className={styles.volunteerSection}>
-        <div className={styles.volunteerGrid}>
+      <section className={styles.supporterSection}>
+        <div className={styles.supporterGrid}>
           <div
             style={{ borderRadius: '10px', overflow: 'hidden' }}
             className={styles.hidden}

@@ -21,7 +21,6 @@
   color: #c06000;
 }
 
-/* Responsive tweaks */
 @media (max-width: 600px) {
   .footer {
     padding: 0.5rem;

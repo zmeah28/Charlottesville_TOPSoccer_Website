@@ -1,4 +1,4 @@
-.navbar {
+   .navbar {
     display: flex;
     align-items: center;
     padding: 0.5rem 2rem;
@@ -8,7 +8,6 @@
     z-index: 1000;
   }
   
-  /* Left section: logo + title */
   .leftSection {
     display: flex;
     align-items: center;
@@ -30,48 +29,28 @@
     font-weight: bold;
   }
   
-  /* Hamburger (mobile) */
-  .menuIcon {
-    display: none;
-    font-size: 2rem;
-    color: #001f3f;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* Center section: nav items + socials */
-  .centerSection {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    position: relative;
-  }
-  
-  /* Nav items container, centered via margin auto */
-  .navItems {
-    display: flex;
-    gap: 2rem;
-    margin: 0 auto;
-    padding-top: 1.2rem;
-  }
-  .show {
-    display: flex !important;
-  }
-  
-  /* Individual nav item for bounce */
   .navItem {
     position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: auto;
+    margin: 0;
+    margin-top: 0.45rem;
   }
   
-  /* Link text + bar */
+
+  .navItemsDesktop {
+    display: flex;  
+    gap: 2rem;
+    margin: 0 auto;     
+  }
   .navLink {
-    position: relative;
     font-family: 'Oswald', sans-serif;
     color: #001f3f;
     text-decoration: none;
     font-size: 1rem;
     padding: 0.25rem;
+    position: relative;
   }
   .navLink::before {
     content: '';
@@ -83,12 +62,12 @@
     background: #001f3f;
   }
   
-  /* Hopping soccer ball */
   .soccerBall {
     position: absolute;
-    bottom: calc(100% + 7.5px);
-    left: 50%;
-    transform: translateX(-50%) translateY(0);
+    bottom: 100%;           
+    left: 50%;               
+    transform: translateX(-50%);
+    margin-bottom: 6px;
     opacity: 0;
     transition: opacity 0.2s;
   }
@@ -96,18 +75,17 @@
     opacity: 1;
     animation: bounce 0.6s ease;
   }
+  
   @keyframes bounce {
-    0%   { transform: translateX(-50%) translateY(0); }
-    30%  { transform: translateX(-50%) translateY(-10px); }
-    50%  { transform: translateX(-50%) translateY(0); }
-    70%  { transform: translateX(-50%) translateY(-5px); }
-    100% { transform: translateX(-50%) translateY(0); }
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-10px); }
+    50%  { transform: translateY(0); }
+    70%  { transform: translateY(-5px); }
+   100%  { transform: translateY(0); }
   }
   
-  /* Social icons pinned to the right */
-  .socialIcons {
-    display: flex;
-    align-items: center;
+  .socialIconsDesktop {
+    display: flex;      
     gap: 1rem;
     margin-left: auto;
   }
@@ -117,50 +95,117 @@
   .socialIcon:hover {
     opacity: 0.7;
   }
+
+  .menuIcon {
+    display: none;     
+    font-size: 2rem;
+    color: #001f3f;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 0.5rem;
+  }
   
-  /* Mobile menu */
-  @media (max-width: 600px) {
+  .socialIconsMobile {
+    display: none;      
+    margin-left: auto;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+    z-index: 900;
+  }
+  .showOverlay {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .sideDrawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    max-width: 300px;
+    height: 100%;
+    background: #fff;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: -4px 0 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+    padding: 2rem 1rem;
+  }
+  .open {
+    transform: translateX(0);
+  }
+  
+  .navItemsMobile {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .navItemMobile {
+    position: relative;
+  }
+  .navLinkMobile {
+    color: #001f3f;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    text-decoration: none;
+  }
+  
+  .soccerBallMobile {
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 10px);   
+    transform: translateY(-50%);
+    opacity: 0;
+    transition:
+      opacity 0.2s ease,
+      left 0.4s ease;     
+  }
+
+  @media (max-width: 1100px) {
+    .navItemsDesktop,
+    .socialIconsDesktop {
+      display: none;
+    }
+  
     .menuIcon {
       display: block;
     }
-    .navItems {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: #fff;
-      width: 100%;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 1rem 0;
-    }
-    .show {
-      display: flex !important;
-    }
-    .navLink {
-      margin: 0.5rem auto;
-    }
-    .socialIcons {
-      display: none;
+    .socialIconsMobile {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
     }
   }
   
-  @media (max-width: 700px) {
-    .navLink::before {
+  @media (min-width: 1101px) {
+    .menuIcon,
+    .socialIconsMobile {
       display: none;
     }
-    /* remove the hopping ball */
-    .soccerBall {
-      display: none !important;
+  
+    .navItemsDesktop {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
     }
-    /* fade-background hover on links */
-    .navLink {
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-    .navLink:hover {
-      background-color: rgba(0, 31, 63, 0.1);
-      color: #001f3f;
-      border-radius: 4px;
+    .socialIconsDesktop {
+      position: absolute;
+      right: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
   

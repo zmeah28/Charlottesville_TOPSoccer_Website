@@ -19,36 +19,34 @@
   opacity: 0;
 }
 
-/* Community Partners */
-.playersSection {
+.partnerSection {
   margin-bottom: 3rem;
 }
-.playerGrid {
+.partnerGrid {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
   flex-wrap: wrap;
 }
-.playerGrid > div {
+.partnerGrid > div {
   flex: 1 1 calc(50% - 1.5rem);
-  max-width: 250px;
+  max-width: 200px;
+  justify-content: center;
 }
 
-/* Community Supporters */
-.volunteerSection {
+.supporterSection {
   margin: 3rem 0;
 }
-.volunteerGrid {
+.supporterGrid {
   display: flex;
   justify-content: center;
   gap: 2rem;
 }
-.volunteerGrid > div {
+.supporterGrid > div {
   flex: 1 1 calc(100% - 2rem);
   max-width: 800px;
 }
 
-/* Animations */
 @keyframes slideInLeft {
   from { opacity: 0; transform: translateX(-50px); }
   to   { opacity: 1; transform: translateX(0); }
@@ -64,7 +62,6 @@
   animation: fadeIn 1s forwards;
 }
 
-/* Responsive */
 @media (max-width: 600px) {
   .playerGrid,
   .volunteerGrid {
