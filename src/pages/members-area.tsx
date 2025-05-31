@@ -41,7 +41,9 @@ const MemberArea: React.FC = () => {
       >
         Inclusion Policy
       </h1>
-
+      <h2 className={styles.subHeading}>
+          The Challenges Facing Children with Disabilities
+        </h2>
       <section
       className={`${styles.contentSection} ${styles.hidden}`}
       data-animation="animateSlideInRight"

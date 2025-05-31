@@ -7,6 +7,19 @@ import PartnershipsImg from '@/assets/images/Partnerships_Image.png';
 import PartnershipsImg2 from '@/assets/images/Partnerships_Image2.png';
 import CommunitySupporters from '@/assets/images/CommunitySupporters.png';
 
+    const partner = [
+      {
+        src: PartnershipsImg,
+        href: "https://www.charlottesvillealliancesc.org/",
+        alt: 'Partner 1'
+      },
+      {
+        src: PartnershipsImg2,
+        href: "https://www.madisonhouse.org/",
+        alt: 'Partner 2'
+      }
+    ];
+
 const ApplyPage: React.FC = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(

@@ -76,6 +76,23 @@ const AboutPage: React.FC = () => {
         <h1 className={`${styles.mainHeading} ${styles.hidden}`} data-animation="animateSlideInLeft">
           Volunteers
         </h1>
+        {/* Volunteer Photos */}
+        <section className={styles.volunteerSection}>
+          <div className={styles.volunteerGrid}>
+            {[Volunteer1, Volunteer2].map((img, i) => (
+              <div key={i} className={`${styles} ${styles.hidden}`} data-animation="animateFadeIn">
+                <Image
+                  src={img}
+                  alt={`Volunteer ${i+1}`}
+                  width={100}
+                  height={100}
+                  className={`${styles.Image} ${styles.rounded}`}
+                  priority
+                />
+              </div>
+            ))}
+          </div>
+        </section>
         <section className={`${styles.contentSection} ${styles.hidden}`} data-animation="animateSlideInLeft">
           <h2 className={styles.subHeading}>Participation</h2>
           <p>
@@ -106,24 +123,6 @@ const AboutPage: React.FC = () => {
               Spring 2025 Program Dates: 04/05, 04/12, 04/26, 05/03, 05/10
             </li>
           </ul>
-        </section>
-
-        {/* Volunteer Photos */}
-        <section className={styles.volunteerSection}>
-          <div className={styles.volunteerGrid}>
-            {[Volunteer1, Volunteer2].map((img, i) => (
-              <div key={i} className={`${styles} ${styles.hidden}`} data-animation="animateFadeIn">
-                <Image
-                  src={img}
-                  alt={`Volunteer ${i+1}`}
-                  width={100}
-                  height={100}
-                  className={`${styles.Image} ${styles.rounded}`}
-                  priority
-                />
-              </div>
-            ))}
-          </div>
         </section>
       </div>
   );
